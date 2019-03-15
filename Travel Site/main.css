@@ -1,0 +1,475 @@
+:root{
+/*Color Pallets*/
+--color-primary:#F15025;
+--color-primary-light:#F25F38;
+--color-primary-dark:#DC4922;
+
+--color-secondary:#E6E8E6;
+--color-secondary-light:#ECEEEC;
+--color-secondary-dark: #E8EAE8;
+
+--color-tertiary:#CED0CE;
+--color-tertiary-light:#DBDCDB;
+--color-tertiary-dark:#D2D4D2;
+
+--color-dark:rgb(53, 53, 56);
+--color-dark-light:rgb(86, 86, 94);
+--color-dark-dark:rgb(19, 19, 20);
+
+/*Fonts*/
+--default-font-size: 1.6rem;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+*, *::before, *::after{
+	padding: 0rem;
+	margin: 0rem;
+	box-sizing: border-box;
+}
+
+body{
+	text-align: center;
+	background-color: var(--color-secondary-dark);
+}
+
+.container{
+	text-align: center;
+	display: inline-block;
+	width: 95vw;
+	height: auto;
+	background-color: var(--color-secondary-dark);
+}
+
+.splash_page{
+	text-align:center;
+	height: 95vh;
+	width: 95vw;
+	display: inline-block;
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(242, 95, 56,.6) ,
+		rgba(220, 73, 34, .3)) ,
+	url("img/NYSkyline.jpg");
+	transform: 50%,50%;
+	background-position:center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-clip-path: polygon(100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+	clip-path: polygon(100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+}
+.header_title{
+	text-align: center;
+	font-family: 'Permanent Marker', cursive;
+	display: inline-block;
+	position: center;
+	margin-top: 15rem;
+	font-size: 10vw;
+	text-shadow: 1rem 1rem var(--color-secondary-light);
+}
+
+.header_subtitle{
+	text-align: center;
+	font-family: 'Permanent Marker', cursive;
+	display: inline-block;
+	position: center;
+	font-size: 3vw;
+	text-shadow: .5rem .5rem var(--color-secondary-light);
+}
+
+@keyframes pulse{
+	0%{
+		font-size: 10vw;
+	}
+	50%{
+		font-size: 12vw;
+	}
+	100%{
+		font-size: 10vw;
+	}
+}
+
+.header_title:hover{
+	animation-name: pulse;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	backface-visibility: hidden;
+}
+
+@keyframes drop{
+	50%{
+		margin-top: 3rem;
+	}
+	100%{
+		margin-top: 0rem;
+	}
+}
+
+.header_subtitle:hover{
+	animation-name: drop;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	backface-visibility: hidden;
+}
+
+.composition_header{
+	font-size: 4.5vh;
+	text-align: center;
+	font-family: 'Permanent Marker', cursive;
+	margin-left: 10vw;
+
+
+}
+
+.composition_image{
+	height: 30vh;
+	width: 30vh;
+	overflow: hidden;
+	position: relative;
+	object-fit: cover;
+	border-spacing: 2rem;
+	border-width: .25rem;
+	border-style: solid;
+	border-color: var(--color-primary);
+}
+
+.image_1{
+	left: 13vw;
+	top: -3vh;
+}
+
+.image_2{
+	left: 10vw;
+	top: 5vh;
+}
+
+.image_3{
+	left: -13vw;
+	top: 20vh;
+}
+
+.composition_image:hover{
+	z-index: 10;
+	transform: scale(1.2);
+	border-width: .5rem;
+	border-style: solid;
+	/*border-color: var(--color-primary);*/
+	border-spacing: 5rem;
+	border-collapse: separate;
+	transition: all 1s;
+}
+
+.composition_image_cluster:hover .composition_image:not(:hover){
+	transform: scale(.9);
+	opacity: .3;
+	transition: all 1s;
+	border-width: .15rem;
+	border-style: solid;
+	/*border-color: var(--color-dark);*/
+}
+
+.col-1-of-2{
+	width: calc((90vw)/2);
+	margin-top: 15vh;
+}
+
+.composition_description{
+	font-size: 2vh;
+	text-align: left;
+	margin-left: 10vw;
+	font-family: 'Fahkwang', sans-serif;
+}
+
+[class^="col"]{
+	float: left;
+}
+
+/*.first_composition{
+	width: 95vw;
+	height: 90vh;
+	background-color:var(--color-tertiary);
+	-webkit-clip-path: polygon(50% 10%, 100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+	clip-path: polygon(50% 10%, 100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+	position: relative;
+	/*top: -5rem;
+	z-index: 2;
+	box-shadow: 0 1.5rem 4rem rgba(0,0,0,11);
+}*/
+
+.row{
+	height: 70vh;
+	width: 95vw;
+
+}
+
+.composition_image_cluster{
+	background-color: red;
+	height: 0rem;
+}
+
+.content_break{
+	height: 15vh;
+	width: 95vw;
+	/*background-color: var(--color-secondary-dark);*/
+	background-color: purple;
+	-webkit-clip-path: polygon(100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+	clip-path: polygon(100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+	/*position: relative;
+	bottom: -5vh;*/
+	z-index: -7;
+}
+
+.composition_cards{
+	/*z-index: 2;
+	width: 95vw;
+	height: 100vh;*/
+	display: flex; 
+	justify-content: space-around;
+	/*background-color:var(--color-tertiary);
+	-webkit-clip-path: polygon(50% 10%, 100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+	clip-path: polygon(50% 10%, 100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+	box-shadow: 0 1.5rem 4rem rgba(0,0,0,11);*/
+}
+
+.composition_cards_row{
+	display: flex; 
+	justify-content: space-around;
+	width: 95vw;
+	height: 0rem;
+}
+
+.card{
+	margin-top: 15vh;
+	width: 15vw;
+	height: 50vh;
+	/*background-color: red;*/
+	font-size: 2vh;
+	position: relative;
+	perspective: 150rem;
+	-moz-perspective:150rem;
+}
+
+.footer{
+background-color: var(--color-tertiary);
+width: 95vw;
+height: 90vh;
+-webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.card-side{
+	/*position: absolute;
+	top: 0;
+	left: 0;*/
+	/*transition: all 1s;*/
+	backface-visibility: hidden;
+	width: 15vw;
+	height: 50vh;
+	box-shadow: 0 1.5rem 4rem rgba(220, 73, 34, 11);
+	/*border-radius: 2rem;*/
+}
+
+.card-side-front{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--color-tertiary-light);
+	z-index: 1;
+	transition: all 1s;
+}
+
+.card-side-back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateY(-180deg);
+	background-color: var(--color-tertiary-light);
+	z-index: 0;
+	transition: all 1s;
+}
+
+.card:hover .card-side-front{
+	transform: rotateY(-180deg);
+}
+
+.card:hover .card-side-back{
+	transform: rotateY(0deg);
+}
+
+.card-header{
+	font-size: 5vh;
+	font-family:'Permanent Marker', cursive;
+	margin-bottom: 2vh; 
+	background-color: var(--color-primary-light);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%); 
+	height: 20vh;
+	display: flex;
+	justify-content: space-around;
+	align-content: column;
+	background-position: center;
+	background-size: 15vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.card-content{
+	font-size: 2vh;
+	text-align: center;
+	font-family: 'Fahkwang', sans-serif;
+}
+
+.media-links{
+	display: flex;
+	justify-content: space-around;
+}
+
+.icon{
+	width: 10vh;
+	height: 10vh;
+/*	margin-left: 10vw;
+	margin-right: 10vw;*/
+	position: relative;
+}
+
+.icon-empty{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 35vh;
+}
+
+.icon-fill{
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 35vh;
+	transform: scale(0);
+}
+
+.icon:hover .icon-fill{
+	transform: scale(1);
+	transition: 1s;
+}
+
+.icon:hover .icon-empty{
+	transform: scale(0);
+	transition: 1s;
+}
+
+.card-header-title{
+	margin-top: 5rem;
+	text-shadow: -1rem -1rem var(--color-primary-light),
+	 1rem 1rem var(--color-primary-dark);
+}
+
+.card-map{
+	width: 15vw;
+	height: 50vh;
+	opacity: 0;
+}
+
+.card-side:hover .card-map{
+	opacity: 1;
+}
+
+.card-1{
+	background-image: url(img/bg/PhiladelphiaSkyline.jpg);
+}
+
+.card-2{
+	background-image: url(img/bg/NewYorkArial.jpg);
+}
+
+.card-3{
+	background-image: url(img/bg/BostonSkyline.jpg);
+}
+
+.card-content-line{
+	margin-bottom: 2vh;
+}
+
+.composition{ 
+	width: 95vw;
+	height: 90vh;
+	background-color:var(--color-tertiary);
+	-webkit-clip-path: polygon(50% 10%, 100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+	clip-path: polygon(50% 10%, 100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+	position: relative;
+}
+
+.composition_quote{
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;
+	align-items: center;
+}
+
+.composition_quote_block{
+	margin-top: 14vh;
+	background-color: var(--color-tertiary-light);
+	height: 20vh;
+	width: 70vw;
+	box-shadow: 0 1.5rem 4rem rgba(220, 73, 34, 11);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-family: 'Fahkwang', sans-serif;
+	font-size: 2vh;
+}
+
+.composition_quote_block_image{
+	height: 20vh;
+	width: 20vh;
+	-webkit-clip-path: circle(45% at 50% 50%);
+	clip-path: circle(45% at 50% 50%);
+}
+
+.composition_quote_block_image:hover{
+	filter: blur(1rem);
+}
+
+.big_quotes{
+	font-size: 15vh;
+	font-family: 'Sorts Mill Goudy', serif;
+}
+
+.composition_quote_block:hover{
+	box-shadow: 0 2rem 4rem rgba(220, 73, 34, 11);
+}
+
+.composition_quote_block_header{
+	position: relative;
+	text-align: center;
+}
+
+.composition_quote_block_image_name{
+	position: absolute;
+	top: 45%;
+	left: 25%;
+	opacity: 0;
+}
+
+.composition_quote_block_header:hover .composition_quote_block_image_name{
+	opacity: 1;
+	animation-name: shake;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	transition: 1s;
+}
+
+/*@keyframes shake{
+	30%{
+		transform: translateY(-.5rem);
+	}
+	60%{
+		transform: translateY(1rem);
+	}
+	90%{
+		transform: translateY(-.5rem);
+	}
+}*/
